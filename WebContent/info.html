@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Action Rules</title>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="ar.js"></script>
+</head>
+<body background="download.jpg">
+	<div style="border-bottom-width: 5px; margin-left: 400px">
+		<h2 style="color: maroon;">Action Attribute Evaluation</h2>
+		<form action="generate" method="post">
+			<br> <input id="attributes" type="hidden" name="attributes">
+			Attribute File <input id="attributefile" type="file"
+				name="attributefile" required="required" onchange="parse()">
+			Data File <input id="datafile" type="file" name="datafile"
+				required="required"> <br> 
+			<!-- <button type="button" onclick="parseFile()">Show Data</button> -->
+			<Strong><h3>Decision Attribute Information</h3> </Strong><br> <br>
+			Decision Attribute <select id="decisionattribute" style="width: 120px;"
+				name="decisionattribute" required="required" onchange="selection()">
+				<option value="">select</option>
+			</select><br><br> Decision value from <input type="text"
+				name="decisionvaluefrom" required="required"> Decision value
+			to <input type="number" name="decisionvalueto" required="required">
+
+			<br> <br> <br> <Strong><h3>Stable
+					Attribute Information</h3></Strong><br> Select Stable Attribute <select
+				style="width: 120px; height: 120px" id="stableattribute"
+				name="stableattribute" multiple required="required">
+			</select> <br> <br> <br> Support <input type="number"
+				name="support" required="required"> Confidence <input
+				type="number" name="confidence" required="required"> <br>
+			<br>
+			<button type="submit">Generate Action Rules</button>
+			<button type="button" onClick="window.location.reload()">Clear</button>
+		</form>
+	</div>
+</body>
+</html>
